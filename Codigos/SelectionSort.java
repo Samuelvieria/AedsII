@@ -39,7 +39,7 @@ public class SelectionSort {
                     menor = j;
                 }
             }
-            Swap(array, menor, i); // Corrigido o uso de Swap
+            Swap(array, menor, i); 
         }
     }
 
