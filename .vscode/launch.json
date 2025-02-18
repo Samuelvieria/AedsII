@@ -3,6 +3,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "TP01_03",
+      "request": "launch",
+      "mainClass": "TP01_03.TP01_03",
+      "projectName": "AedsII_22280399"
+    },
+    {
+      "type": "java",
+      "name": "TP01_03",
+      "request": "launch",
+      "mainClass": "TP01_03",
+      "projectName": "AedsII_22280399"
+    },
+    {
+      "type": "java",
+      "name": "TP01_01",
+      "request": "launch",
+      "mainClass": "TP01_01",
+      "projectName": "AedsII_22280399"
+    },
+    {
+      "type": "java",
       "name": "TP01_01",
       "request": "launch",
       "mainClass": "TP0101.TP01_01",
