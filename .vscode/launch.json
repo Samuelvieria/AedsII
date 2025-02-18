@@ -2,12 +2,21 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "TP01_01",
+      "request": "launch",
+      "mainClass": "TP0101.TP01_01",
+      "projectName": "AedsII_22280399"
+    },
+    {
       "name": "C/C++ Runner: Debug Session",
-      "type": "lldb",
+      "type": "cppvsdbg",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/samuelalves/AedsII/Labs",
-      "program": "/Users/samuelalves/AedsII/Labs/build/Debug/outDebug"
+      "stopAtEntry": false,
+      "console": "externalTerminal",
+      "cwd": "c:/Users/Samuel/Desktop/AedsII/Tps/Tp-java/Tp-c/TP01",
+      "program": "c:/Users/Samuel/Desktop/AedsII/Tps/Tp-java/Tp-c/TP01/build/Debug/outDebug"
     }
   ]
 }

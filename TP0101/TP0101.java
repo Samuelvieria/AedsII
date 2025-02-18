@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class TP01_01 {
+public class TP0101 {
 
     public static boolean Palindromo(String palavra) {
         String palavraMinu = palavra;
