@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class TP01_01 {
 
     public static boolean Palindromo(String palavra) {
-        String palavraMinu = palavra.toLowerCase();
+        String palavraMinu = palavra;
         int tamanho = palavraMinu.length();
 
         for (int i = 0; i < tamanho / 2; i++) {
