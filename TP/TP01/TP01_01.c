@@ -13,14 +13,14 @@
     for(int i = 0; i<tamanho/2; i++){
         int j = tamanho - 1 - i;
             if(palavra[i] != palavra[j]){
-                printf("NAO/n");
+                printf("NAO\n");
                 return;
             }
         
     }
 
 
-  printf("SIM/n");
+  printf("SIM\n");
 
 
 
