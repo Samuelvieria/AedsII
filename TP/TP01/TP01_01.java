@@ -1,49 +1,38 @@
-
-
 import java.util.Scanner;
-
 
 public class TP01_01 {
 
-    public static void Palindromo(String palavra) {
-        String palavraMinu = palavra.toLowerCase(); 
-        boolean ehPali = true; 
+    public static boolean Palindromo(String palavra) {
+        String palavraMinu = palavra.toLowerCase();
+        int tamanho = palavraMinu.length();
 
-        for (int i = 0; i < palavraMinu.length(); i++) {
-  
-            for (int j = palavraMinu.length() - 1; j >= 0; j--) {
-               
-                if (palavraMinu.charAt(i) != palavraMinu.charAt(j)) {
-                    ehPali = false; 
-                    break; 
-                }
-            }
-            if (!ehPali) {
-                break; // Sai do laço externo também
+        for (int i = 0; i < tamanho / 2; i++) {
+            int j = tamanho - 1 - i; // Índice do outro lado da string
+            if (palavraMinu.charAt(i) != palavraMinu.charAt(j)) {
+                return false;
             }
         }
 
-        if (ehPali) {
-            System.out.println("SIM");
-        } else {
-            System.out.println("NAO");
-        }
-    }
-
-    // Função de leitura
-    public static String leitura() {
-        Scanner scanner = new Scanner(System.in);
-        String palavra = scanner.nextLine();
-        return palavra;
+        return true;
     }
 
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String input;
+
         while (true) {
-            String input = leitura(); 
-            if (input.equals("FIM")) { // Verifica se a palavra é "FIM"
+            input = scanner.nextLine();
+            if (input.equals("FIM")) {
                 break;
             }
-            Palindromo(input);
+
+            if (Palindromo(input)) {
+                System.out.println("SIM");
+            } else {
+                System.out.println("NAO");
+            }
         }
+
+        scanner.close();
     }
 }
