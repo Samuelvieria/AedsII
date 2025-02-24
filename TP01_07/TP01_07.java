@@ -13,9 +13,9 @@ public class TP01_07 {
 
             palavraChar[tamanho-i-1] = palavra.charAt(i);
 
-            
         }
 
+    
 
 
         return new String(palavraChar);

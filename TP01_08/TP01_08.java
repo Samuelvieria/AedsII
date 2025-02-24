@@ -1,4 +1,3 @@
-package TP01_08;
 
 import java.util.Scanner;
 
