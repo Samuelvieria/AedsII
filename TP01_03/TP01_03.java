@@ -1,4 +1,6 @@
+
 package TP01_03;
+
 import java.util.Scanner;
 
 public class TP01_03 {
@@ -8,25 +10,24 @@ public class TP01_03 {
         char[] palavraChar = palavra.toCharArray();
 
         for (int i = 0; i < tamanho; i++) {
-            palavraChar[i] = (char) (palavraChar[i] + 3);
+            
+            palavraChar[i] = (char)(palavra.charAt(i) + 3);
         }
 
         return new String(palavraChar);
     }
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String input;
+        Scanner palavra = new Scanner(System.in);
 
         while (true) {
-            input = scanner.nextLine();
-            if (input.equals("FIM")) {
-                break;
+            String palavra2 = palavra.nextLine();
+            if (palavra2.equals("FIM")) {
+                palavra.close();
+                return;
             }
 
-           System.out.println(ciframento(input));
+            System.out.println(ciframento(palavra2));
         }
-
-        scanner.close();
     }
 }
