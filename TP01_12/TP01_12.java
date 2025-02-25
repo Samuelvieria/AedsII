@@ -1,4 +1,4 @@
-package TP01_12;
+
 
 import java.util.Scanner;
 
@@ -32,7 +32,7 @@ public class TP01_12 {
         if (temNumero && temMaiuscula && temMinusculo && temEspecial) {
             System.out.println("SIM");
         } else {
-            System.out.println("NÃO");
+            System.out.println("N"+'\u00C3'+"O");
         }
     }
 
