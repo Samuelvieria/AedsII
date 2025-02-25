@@ -1,11 +1,19 @@
+
+
+
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class TP01_09 {
 
-    public static void Anagrama(String p1, String p2) {
-        char[] p1Char = p1.toCharArray();
-        char[] p2Char = p2.toCharArray();
+    public static void Anagrama(String palavra) {
+       String palavraMin= palavra.toLowerCase();
+
+        String[] palavras = palavraMin.split(" " );
+
+
+        char[] p1Char = palavras[0].toCharArray();
+        char[] p2Char = palavras[2].toCharArray();
 
         Arrays.sort(p1Char);
         Arrays.sort(p2Char);
@@ -16,10 +24,11 @@ public class TP01_09 {
         if (a.equals(b)) {
             System.out.println("SIM");
         } else {
-            System.out.println("NÃO");
+            System.out.println("N"+'\u00C3'+"O");
         }
+        
     }
-
+    
     public static void main(String[] args) {
         Scanner palavra = new Scanner(System.in);
 
@@ -29,12 +38,9 @@ public class TP01_09 {
                 break;  
             }
 
-            if (palavra.hasNextLine()) {
-                String palavra3 = palavra.nextLine();
-                Anagrama(palavra2, palavra3);
-            } else {
-                break;  
-            }
+           
+                Anagrama(palavra2);
+           
         }
 
         palavra.close();  

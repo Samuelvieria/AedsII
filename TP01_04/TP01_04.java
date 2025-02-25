@@ -5,9 +5,8 @@ import java.util.Scanner;
 
 public class TP01_04 {
 
-    public static String Aleatorio(String palavra){
-        Random gerador = new Random();
-        gerador.setSeed(4);
+    public static String Aleatorio(String palavra,Random gerador){
+        
         int tamanho = palavra.length();
         char[] palavraChar = palavra.toCharArray();
 
@@ -33,6 +32,8 @@ public class TP01_04 {
     public static void main(String[] args) {
 
         Scanner palavra = new Scanner(System.in);
+        Random gerador = new Random();
+        gerador.setSeed(4);
 
         while (true) {
             String palavra2 = palavra.nextLine();
@@ -41,7 +42,7 @@ public class TP01_04 {
                 return;
             }
 
-            System.out.println(Aleatorio(palavra2));
+            System.out.println(Aleatorio(palavra2,gerador));
         }
         
     }
