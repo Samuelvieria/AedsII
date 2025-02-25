@@ -2,103 +2,51 @@ package TP01_12;
 
 import java.util.Scanner;
 
-//Uma senha é considerada válida se contém pelo menos 8 caracteres, incluindo pelo menos uma letra maiúscula, uma letra minúscula, um número e um caractere especia
-
 public class TP01_12 {
 
-    public static boolean EhsenhaRec(Char[] senha ,int i){
-        
-        if(senha[i]> 'a' && senha[i]< 'z' || senha[i]> '0' && senha[i]< '9' || senha[i]> '!' && senha[i]< '~' || senha[i]> 'A'&& senha ){
-
-        }
-
-    }
-
     public static void senha(String senha) {
-      
-        char[] senhaChar = senha.toCharArray();
-        boolean ehsenha = false;
-        int i = 0;
-
-        EhsenhaRec(senhaChar,i);
-
-      
-        
-        
-       
-
-      }
-
-
-        
-  } 
-}
-
-    
-
-    public static void main(String[] args) {
-        Scanner palavra = new Scanner(System.in);
-
-        while (true) {
-            String palavra2 = palavra.nextLine();
-            if (palavra2.equals("FIM")) {
-                palavra.close();
-                return;
-            }
-
-
-            senha(palavra2);
+        if (senha.length() < 8) {
+            System.out.println("N"+'\u00C3'+"O");
+            return;
         }
-        
-    }
-    
-}
 
-
-/*public class VerificarCaracteres {
-    public static void main(String[] args) {
-        String texto = "Exemplo123!";
-
-        boolean temNumero = false;
         boolean temMaiuscula = false;
+        boolean temMinusculo = false;
+        boolean temNumero = false;
         boolean temEspecial = false;
 
-        // Percorre cada caractere da string
-        for (int i = 0; i < texto.length(); i++) {
-            char c = texto.charAt(i);
+        for (int i = 0; i < senha.length(); i++) {
+            char c = senha.charAt(i);
 
-            if (Character.isDigit(c)) {
-                temNumero = true;
-            } else if (Character.isUpperCase(c)) {
+            if (Character.isUpperCase(c)) {
                 temMaiuscula = true;
-            } else if (!Character.isLetterOrDigit(c)) {
+            } else if (Character.isLowerCase(c)) {
+                temMinusculo = true;
+            } else if (Character.isDigit(c)) {
+                temNumero = true;
+            } else {
                 temEspecial = true;
             }
-
-            // Se todos os tipos já foram encontrados, podemos parar
-            if (temNumero && temMaiuscula && temEspecial) {
-                break;
-            }
         }
 
-        // Verificando resultados
-        if (temNumero) {
-            System.out.println("A string contém um número.");
+        if (temNumero && temMaiuscula && temMinusculo && temEspecial) {
+            System.out.println("SIM");
         } else {
-            System.out.println("A string NÃO contém um número.");
-        }
-
-        if (temMaiuscula) {
-            System.out.println("A string contém uma letra maiúscula.");
-        } else {
-            System.out.println("A string NÃO contém uma letra maiúscula.");
-        }
-
-        if (temEspecial) {
-            System.out.println("A string contém um caractere especial.");
-        } else {
-            System.out.println("A string NÃO contém um caractere especial.");
+            System.out.println("NÃO");
         }
     }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            String entrada = scanner.nextLine();
+            if (entrada.equals("FIM")) {
+                break;
+            }
+            senha(entrada);
+        }
+
+        scanner.close();
+    }
 }
- */
