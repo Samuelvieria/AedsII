@@ -1,26 +1,26 @@
-package TP01_14;
+
 
 import java.io.*;
 import java.util.Scanner;
 
 public class TP01_14 {
 
-    public static void LerArq() throws IOException {
+    public static void LerArq() throws Exception {
         Scanner scanner = new Scanner(System.in);
 
         // Caminho do arquivo
-        String caminho = "C:/Users/Samuel/Desktop/AedsII/TP01_14/arq.txt";
+        String caminho = "numeros.txt";
         File arquivo = new File(caminho);
 
         // Cria o arquivo se não existir
         if (arquivo.createNewFile()) {
-            System.out.println("Arquivo criado com sucesso.");
+           
         } else {
             System.out.println("Arquivo já existe.");
         }
 
         // Pede o número de linhas que o usuário deseja escrever
-        System.out.print("Digite a quantidade de linhas: ");
+       
         int n = scanner.nextInt();
         scanner.nextLine(); // Consumir a quebra de linha após nextInt()
 
@@ -40,7 +40,6 @@ public class TP01_14 {
         RandomAccessFile raf = new RandomAccessFile(arquivo, "r");
         long tamanhoArq = raf.length();
 
-        System.out.println("\nConteúdo invertido:");
         for (long i = tamanhoArq - 1; i >= 0; i--) {
             raf.seek(i);
             char caractere = (char) raf.read();
@@ -52,7 +51,7 @@ public class TP01_14 {
         scanner.close();
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws Exception {
         LerArq();
     }
 }
