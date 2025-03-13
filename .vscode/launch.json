@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "TP01_14",
+      "request": "launch",
+      "mainClass": "TP01_14.TP01_14",
+      "projectName": "AedsII_22280399"
+    },
+    {
+      "type": "java",
       "name": "TP01_12",
       "request": "launch",
       "mainClass": "TP01_12.TP01_12",
