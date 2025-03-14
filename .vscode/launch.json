@@ -2,56 +2,14 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "type": "java",
-      "name": "TP01_14",
-      "request": "launch",
-      "mainClass": "TP01_14.TP01_14",
-      "projectName": "AedsII_22280399"
-    },
-    {
-      "type": "java",
-      "name": "TP01_12",
-      "request": "launch",
-      "mainClass": "TP01_12.TP01_12",
-      "projectName": "AedsII_22280399"
-    },
-    {
-      "type": "java",
-      "name": "TP01_03",
-      "request": "launch",
-      "mainClass": "TP01_03.TP01_03",
-      "projectName": "AedsII_22280399"
-    },
-    {
-      "type": "java",
-      "name": "TP01_03",
-      "request": "launch",
-      "mainClass": "TP01_03",
-      "projectName": "AedsII_22280399"
-    },
-    {
-      "type": "java",
-      "name": "TP01_01",
-      "request": "launch",
-      "mainClass": "TP01_01",
-      "projectName": "AedsII_22280399"
-    },
-    {
-      "type": "java",
-      "name": "TP01_01",
-      "request": "launch",
-      "mainClass": "TP0101.TP01_01",
-      "projectName": "AedsII_22280399"
-    },
-    {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppvsdbg",
       "request": "launch",
       "args": [],
       "stopAtEntry": false,
       "console": "externalTerminal",
-      "cwd": "c:/Users/Samuel/Desktop/AedsII/Tps/Tp-java/Tp-c/TP01",
-      "program": "c:/Users/Samuel/Desktop/AedsII/Tps/Tp-java/Tp-c/TP01/build/Debug/outDebug"
+      "cwd": "c:/Users/Samuel/Desktop/AedsII/TP01_21",
+      "program": "c:/Users/Samuel/Desktop/AedsII/TP01_21/build/Debug/outDebug"
     }
   ]
 }
