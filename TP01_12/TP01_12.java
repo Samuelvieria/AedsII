@@ -1,12 +1,11 @@
 
-
 import java.util.Scanner;
 
 public class TP01_12 {
 
     public static void senha(String senha) {
         if (senha.length() < 8) {
-            System.out.println("N"+'\u00C3'+"O");
+            System.out.println("NAO");
             return;
         }
 
@@ -32,7 +31,7 @@ public class TP01_12 {
         if (temNumero && temMaiuscula && temMinusculo && temEspecial) {
             System.out.println("SIM");
         } else {
-            System.out.println("N"+'\u00C3'+"O");
+            System.out.println("NAO");
         }
     }
 

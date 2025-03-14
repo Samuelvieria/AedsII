@@ -1,45 +1,35 @@
-package TP01_11;
-
+import java.util.HashSet;
 import java.util.Scanner;
 
 public class TP01_11 {
-
-    public static void Maiorseq(String p){
-
-        char[] Pchar = p.toCharArray();
-        int tamnho = p.length();
-        int seq = 0;
-        char[] pseq = new char[20];
-
-        for (int i = 0; i<tamnho; i++){
-             pseq[i] = p.charAt(i);
-             for(int )
-
-        }
-
-    }
-
-
-
-
-
-
-
-
-    public static void main(String[] args) {
-
-         Scanner scanner = new Scanner(System.in);
-
-        while (true) {
-            String entrada = scanner.nextLine();
-            if (entrada.equals("FIM")) {
-                break;
+    public static int lengthOfLongestSubstring(String s) {
+        int maxLength = 0;
+        int left = 0;
+        HashSet<Character> seen = new HashSet<>();
+        
+        for (int right = 0; right < s.length(); right++) {
+            while (seen.contains(s.charAt(right))) {
+                seen.remove(s.charAt(left));
+                left++;
             }
-            Maiorseq(entrada);
+            seen.add(s.charAt(right));
+            maxLength = Math.max(maxLength, right - left + 1);
         }
-
-        scanner.close();
-
+        
+        return maxLength;
     }
     
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        while (scanner.hasNextLine()) {
+            String input = scanner.nextLine().trim();
+            if (input.equals("FIM")) {
+                break;
+            }
+            if (!input.isEmpty()) {
+                System.out.println(lengthOfLongestSubstring(input));
+            }
+        }
+        scanner.close();
+    }
 }
