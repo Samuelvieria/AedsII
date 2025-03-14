@@ -36,13 +36,15 @@ public class TP01_13 {
     }
 
     private static int[] contarCaracteres(String html) {
-        // Array com 22 vogais + 1 consoante + 1 <br> + 1 <table> = 24
-        int[] contagem = new int[24]; 
-        String vogais = "aeiouáéíóúàèìòùãõâêîôû";
+        // Array para 22 vogais + 1 consoante + 1 <br> + 1 <table> = 24
+        int[] contagem = new int[100];
+
+      
+        String vogais = "aeiou\u00E1\u00E9\u00ED\u00F3\u00FA\u00E0\u00E8\u00EC\u00F2\u00F9\u00E3\u00F5\u00E2\u00EA\u00EE\u00F4\u00FB";
         String consoantes = "bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ";
 
         for (char c : html.toCharArray()) {
-            // Verifica se é uma vogal
+            // Verifica se é uma vogal (incluindo acentuadas e outras variações)
             int indexVogal = vogais.indexOf(c);
             if (indexVogal != -1) {
                 contagem[indexVogal]++; // Conta vogais
@@ -69,7 +71,16 @@ public class TP01_13 {
     }
 
     private static void exibirResultado(int[] contagem, String nomePagina) {
-        String[] vogais = {"a", "e", "i", "o", "u", "á", "é", "í", "ó", "ú", "à", "è", "ì", "ò", "ù", "ã", "õ", "â", "ê", "î", "ô", "û"};
+        // Array de vogais para exibição, agora com Unicode
+        String[] vogais = {
+            "\u0061", "\u0065", "\u0069", "\u006F", "\u0075", 
+            "\u00E1", "\u00E9", "\u00ED", "\u00F3", "\u00FA", 
+            "\u00E0", "\u00E8", "\u00EC", "\u00F2", "\u00F9", 
+            "\u00E3", "\u00F5", "\u00E2", "\u00EA", "\u00EE", 
+            "\u00F4", "\u00FB"
+        };
+
+        // Exibe a contagem das vogais
         for (int i = 0; i < vogais.length; i++) {
             System.out.print(vogais[i] + "(" + contagem[i] + ") ");
         }
