@@ -1,6 +1,7 @@
 package Labs;
 
 import java.util.Scanner;
+
 public class LAB1 {
 
     // Método para contar o número de caracteres maiúsculos em uma string
