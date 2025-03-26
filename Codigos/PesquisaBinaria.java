@@ -29,6 +29,7 @@ public class PesquisaBinaria {
         boolean resp = false;
         int esq=0, dir=array.length,meio;
 
+return resp;
     }
 
 

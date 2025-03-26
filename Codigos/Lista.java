@@ -113,6 +113,16 @@ public void InserirPos(int x, int pos) throws Exception {
         }
         return retorno;
     }
+    public boolean isPalindromo() {
+        for (int i = 0; i < n / 2; i++) {
+            if (array[i] != array[n - 1 - i]) {
+                return false;
+            }
+        }
+        return true;
+
+        //n é quntidade de elementos n tamanho do array 
+    }
 
     public static void main(String[] args) {
         

@@ -8,4 +8,4 @@ public class Pilha {
 }
 
 
-// Pilha e fila é a mesma bosta na pratica muda na logica uma é FIFO(firt in firt out) e a Pilha é LIFO(last in last out)
+// Pilha e fila é a mesma bosta na pratica muda na logica uma é FIFO(firt in firt out) e a Pilha é LIFO(last in first out)

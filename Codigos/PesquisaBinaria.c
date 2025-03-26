@@ -18,17 +18,17 @@ int main() {
     printf("Digite o tamanho do array: ");
     scanf("%d", &tamanho);
 
-    // Verifica se o tamanho é válido
+  
     if (tamanho <= 0) {
         printf("Tamanho inválido!\n");
-        return 1;  // Encerra o programa caso o tamanho seja inválido
+        return 1;  
     }
 
-    // Aloca dinamicamente o array
+  
     int* array = (int*)malloc(tamanho * sizeof(int));
     if (array == NULL) {
         printf("Erro na alocação de memória!\n");
-        return 1;  // Encerra o programa caso haja falha na alocação de memória
+        return 1;  
     }
 
     // Preenche o array com números aleatórios entre 1 e 10
