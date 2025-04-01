@@ -1,6 +1,7 @@
+package SORTS;
 import java.util.Random;
 
-public class SB {
+public class Bolha {
 
     public static int[] arrayAleatorio() {
         int tamanho = 10;

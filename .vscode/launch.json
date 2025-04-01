@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/samuelalves/AedsII/Codigos",
-      "program": "/Users/samuelalves/AedsII/Codigos/build/Debug/outDebug"
+      "cwd": "/Users/samuelalves/AedsII/CODIGOS",
+      "program": "/Users/samuelalves/AedsII/CODIGOS/build/Debug/outDebug"
     }
   ]
 }
