@@ -23,16 +23,39 @@ public class Bolha {
     }
 
     public static int[] sort(int[] array) {
-        int n = array.length;
-        for (int i = 0; i < n - 1; i++) {
-            for (int j = 0; j < n - i - 1; j++) {
-                if (array[j] > array[j + 1]) {
-                    int temp = array[j];
-                    array[j] = array[j + 1];
-                    array[j + 1] = temp;
-                }
+        int tam = array.length;
+
+
+        
+        /* 
+        Fiz um selection sort sem querer
+         *  for(int i = 0; i<tam ; i++){
+            for(int j = i + 1; j<tam; j++){
+              if(array[i]>array[j]){
+                int tmp;
+                tmp = array[i];
+                array[i] = array[j];
+                array[j] = tmp;
+              }
+
             }
         }
+        */
+
+        for(int i = 0; i<tam-1 ; i++){
+            for(int j = 0; j<tam - 1 - i; j++){
+              if(array[j]>array[j+1]){
+                int tmp;
+                tmp = array[j];
+                array[j] = array[j+1];
+                array[j+1] = tmp;
+              }
+
+            }
+        }
+       
+
+        
         return array;
     }
 
@@ -46,7 +69,10 @@ public class Bolha {
 
         System.out.println("Array depois da ordenação:");
         print(array);
-    }}
+    }
 
     
 }
+// Custo de comparacao sempre é O(nˆ2) mesmo com a implementacao pra reduzir comparacoes.
+
+//Custo de troca: Melhor caso quando o array já esta ordenado, n tem nenhuma troca O(0). Pior quando se tem que trocar todos ou muitos O(nˆ2).

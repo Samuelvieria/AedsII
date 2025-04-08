@@ -1,8 +1,7 @@
 package SORTS;
-
 import java.util.Random;
 
-public class SelectionSort {
+public class ExchangeSort {
 
     // Gera um array aleatório de 10 números entre 0 e 100
     public static int[] arrayAleatorio() {
@@ -32,18 +31,15 @@ public class SelectionSort {
         array[b] = temp;
     }
 
-    // Implementação do Selection Sort
+    // Implementação do Exchange Sort
     public static void Ssort(int[] array) {
-        for (int i = 0; i < array.length-1; i++) {
-            int menor = i;
-
-            for (int j = i + 1; j < array.length; j++) {
-                if (array[j] < array[menor]) {
-                    menor = j;
+        for(int i = 0; i<array.length; i++){
+            for(int j = i +1 ; i< array.length; i++){
+                if(array[i]>array[j]){
+                    Swap(array, i, j);
                 }
 
             }
-            if(menor != i)Swap(array, i, menor);
         }
     }
 
