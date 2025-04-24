@@ -22,8 +22,14 @@ public class QuikSort {
         }
         System.out.println();
     }
+    // Método para trocar elementos no array
+    public static void Swap(int[] array, int a, int b) {
+        int temp = array[a];
+        array[a] = array[b];
+        array[b] = temp;
+    }
 
-    public static void sort(int esq, int dir) {
+    public static int[] sort(int[] array, int esq, int dir) {
 
         int i = esq;
         int j = dir;
@@ -33,22 +39,15 @@ public class QuikSort {
             while(array[i]<array[j])i++;
             while(array[j]>array[i])j--;
             if(i<j){
-                swap(i,j);
+                Swap(array,i,j);
                 i++;
-                j--;:
+                j--;
             }
-            if (esq < j)  sort(esq, j);
-            if (i < dir)  sort(i, dir);
+            if (esq < j)  sort(array,esq, j);
+            if (i < dir)  sort(array,i, dir);
 
 
         }
-
-
-
-        
-        
-        
-
         
         return array;
     }

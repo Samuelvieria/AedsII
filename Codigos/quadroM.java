@@ -1,5 +1,5 @@
 
-import java.lang.reflect.Array;
+/*import java.lang.reflect.Array;
 import java.util.Scanner;
 import java.util.Arrays;
 
@@ -50,3 +50,4 @@ public class quadroM {
     }
 
 }
+*/
