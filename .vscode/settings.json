@@ -57,6 +57,7 @@
   "C_Cpp_Runner.useLinkTimeOptimization": false,
   "C_Cpp_Runner.msvcSecureNoWarnings": false,
   "files.associations": {
-    "LAB01Rec.C": "cpp"
+    "LAB01Rec.C": "cpp",
+    "TP03_07.C": "cpp"
   }
 }
