@@ -1,0 +1,32 @@
+Exercicio 1 
+
+inserirEverfatorde3nos(no i){
+
+    if(no.dir ! = null && no.esq !null){
+        return i;
+    }else if(i.dir !=null){
+        if(i.dir.dir !=null){
+             return rotacaoSimplesesq(no i);
+        }else{
+            return rotacaoDuplaesqdir(no i);
+        }else if(i.esq != null){
+            if(i.esq.esq != null){
+            rotacao(no i);
+            }else{
+                rotacaesqdir(no i);
+            }
+        }
+        if(raiz != null){
+            new no Raiz = i;
+            inserirEverfatorde3nos(no i);
+        }else if(i>raiz){
+            inserirEverfatorde3nos(no i,raiz.dir);
+
+        }else{
+
+            inserirEverfatorde3nos(no i,raiz.esq);
+
+        }
+
+    }
+}
